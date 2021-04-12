@@ -60,4 +60,28 @@ export default class GraphCMSContent {
       return false;
     }
   }
+
+  async updatePost(post_id, { title, body, author }) {
+    const QUERY = gql`
+      mutation {
+        updatePost(
+          where: { id: "${post_id}" }
+          data: { title: "${title}", author: "${author}", body: "${body}" }
+        ) {
+          id
+          title
+          body
+          author
+        }
+      }
+    `;
+
+    try {
+      const data = await this.Client.request(QUERY);
+      return data;
+    } catch (error) {
+      console.log("Error at updatePost:>>", error);
+      return false;
+    }
+  }
 }
