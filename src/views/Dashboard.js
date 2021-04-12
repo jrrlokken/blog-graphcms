@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Query } from 'react-apollo';
 import GraphCMSContent from '../services/graphcms';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import {Modal} from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 
 const DashboardView = props => {
   const [posts, setPosts] = useState([]);

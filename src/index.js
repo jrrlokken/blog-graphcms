@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import dotenv from 'dotenv';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
 
